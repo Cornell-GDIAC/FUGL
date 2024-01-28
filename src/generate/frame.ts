@@ -9,23 +9,21 @@
  * Authors: Walker White, Enoch Chen, Skyler Krouse, Aidan Campbell
  * Date: 1/24/24
  */
-import { generateNode } from ".";
 import { roundToFixed } from "../util";
 import {
   CUGLBaseNode,
-  CUGLNode,
-  CUGLFloatLayoutMixin,
+  CUGLLayoutMixin,
   CUGLChildrenMixin,
-  CUGLAnchoredLayoutMixin,
 } from "../types";
 import {
     convertXAlign,
     convertYAlign,
     convertLayoutMode,
 } from "../util";
-
-import { genButton } from "./button";
-import { genChildrenByFloat, genChildrenByAnchor } from "./children";
+import { 
+    genChildrenByFloat, 
+    genChildrenByAnchor 
+} from "./children";
 
 /**
  * Returns a scene node corresponding to the given frame
@@ -66,7 +64,7 @@ export async function genFrame(node: FrameNode, parent: SceneNode) {
     }
     
     let ypos = parent.height ? parent.height - node.height - node.y : -node.y;
-    const frameCode: CUGLBaseNode & CUGLChildrenMixin & CUGLFloatLayoutMixin = {
+    const frameCode: CUGLBaseNode & CUGLChildrenMixin & CUGLLayoutMixin = {
         type: "Node",
         format,
         data: {

@@ -16,6 +16,7 @@ export default [
     rules: {
       ...ts.configs["eslint-recommended"].rules,
       ...ts.configs["recommended"].rules,
+      "@typescript-eslint/no-unused-var": "off",
       "@typescript-eslint/ban-types": "off"
     },
   },

@@ -10,9 +10,10 @@
  * Authors: Walker White, Enoch Chen, Skyler Krouse, Aidan Campbell
  * Date: 1/24/24
  */
-import { CUGLImageNode, CUGLNinePatchNode } from "../types";
-import { imageHashMap } from "./index";
-import { roundToFixed, hexColor } from "../util";
+import { 
+    roundToFixed, 
+    hexColor,
+} from "../util";
 
 
 /**

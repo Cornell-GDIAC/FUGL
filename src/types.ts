@@ -21,9 +21,9 @@ type CUGLXY = [number, number];
 // A rectangle as left-bottom-right-top
 type CUGLLBRT = [number, number, number, number];
 // A rectangle as (x,y)-(w,h)
-type CUGLXYWH = [number, number, number, number];
+//type CUGLXYWH = [number, number, number, number];
 // A numeric range
-type CUGLMinMax = [number, number];
+//type CUGLMinMax = [number, number];
 // An RGBA color as a numeric value
 type CUGLRGBA = [number, number, number, number];
 
@@ -37,9 +37,9 @@ type CUGLNodeType =
     | CUGLLabelNode
     | CUGLTextFieldNode
     | CUGLImageNode
-    | CUGLRectNode;
-    | CUGLPolyNode;
-    | CUGLPathNode;
+    | CUGLRectNode
+    | CUGLPolyNode
+    | CUGLPathNode
 
 
 /**

@@ -14,12 +14,10 @@
  * Authors: Walker White, Enoch Chen, Skyler Krouse, Aidan Campbell
  * Date: 1/24/24
  */
- import { generateNode } from ".";
 import { roundToFixed } from "../util";
 import {
-  CUGLNode,
-  CUGLFloatLayoutMixin,
   CUGLButtonNode,
+  CUGLLayoutMixin,
   CUGLChildrenMixin,
 } from "../types";
 
@@ -103,7 +101,7 @@ export async function genButton(node: FrameNode, parent: SceneNode) {
     }
     
     let ypos = parent.height ? parent.height - node.height - node.y : -node.y;
-    const buttonCode: CUGLBaseNode & CUGLChildrenMixin & CUGLFloatLayoutMixin = {
+    const buttonCode: CUGLButtonNode & CUGLChildrenMixin & CUGLLayoutMixin = {
         type: "Button",
         format,
         data: {
